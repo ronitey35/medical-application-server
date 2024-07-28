@@ -1,0 +1,48 @@
+{
+  "name": "express-server",
+  "version": "1.0.0",
+  "main": "dist/app.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "lint": "tsc --noEmit && eslint src",
+    "start": "node dist/app.js",
+    "dev": "tsx watch src/app.ts",
+    "build": "esbuild src/app.ts --bundle --platform=node --packages=external --outfile=dist/app.js --format=esm",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.9.4",
+    "@paralleldrive/cuid2": "^2.2.2",
+    "colors": "^1.4.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.32.0",
+    "express": "^4.19.2",
+    "express-server": ".",
+    "morgan": "^1.10.0",
+    "postgres": "^3.4.4",
+    "zod": "^3.22.5"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.12.7",
+    "@types/supertest": "^6.0.2",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "drizzle-kit": "^0.23.0",
+    "esbuild": "^0.20.2",
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.5",
+    "supertest": "^6.3.4",
+    "ts-jest": "^29.1.2",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5"
+  }
+}
